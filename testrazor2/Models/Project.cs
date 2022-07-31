@@ -13,7 +13,7 @@
         public DateTime CreationDate { get; set; }
 
 
-        public Project(long id, string name, DateTime creationDate , string client, 
+        public Project(long id, string name , string client, 
             string image, string pictureAlt, string pictureTitle,
             string shortDiscription, string body)
         {

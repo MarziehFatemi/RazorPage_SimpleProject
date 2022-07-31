@@ -16,45 +16,51 @@
 
 	<div>
 	<div>
-		<label asp-for="@Model.CreateProject.Name" > نام </label>
+		<label asp-for="@Model.CreateProject.Name" >  </label>
 		<input  asp-for="@Model.CreateProject.Name"  class="form-control"> </input>
-
+		<span  asp-validation-for ="@Model.CreateProject.Name" class="text-danger" > </span>
 	</div>
 
 	<div>
 
-		<label asp-for="@Model.CreateProject.Client"> مشتری</label>
-		<input  asp-for="@Model.CreateProject.Name"  class="form-control"> </input>
+		<label asp-for="@Model.CreateProject.Client"> </label>
+		<input  asp-for="@Model.CreateProject.Client"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.CreateProject.Client" class="text-danger"> </span>
 
 	</div>
 
 	<div> 
-		<label asp-for="@Model.CreateProject.Image"> تصویر</label>
-		<input  asp-for="@Model.CreateProject.Name"  class="form-control"> </input>
+		<label asp-for="@Model.CreateProject.Image"> </label>
+		<input  asp-for="@Model.CreateProject.Image"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.CreateProject.Image" class="text-danger"> </span>
 
 	</div>
 
 	<div>
-		<label asp-for="@Model.CreateProject.PictureAlt"> Alt  تصویر</label>
+		<label asp-for="@Model.CreateProject.PictureAlt">  </label>
 		<input  asp-for="@Model.CreateProject.PictureAlt"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.CreateProject.PictureAlt" class="text-danger"> </span>
 
 	</div>
 	<div>
-		<label asp-for="@Model.CreateProject.PictureTitle" > عنوان تصویر</label>
+		<label asp-for="@Model.CreateProject.PictureTitle" >  </label>
 		<input  asp-for="@Model.CreateProject.PictureTitle" class="form-control"> </input>
+		<span  asp-validation-for ="@Model.CreateProject.PictureTitle" class="text-danger"> </span>
 
 	</div>
 
 	<div>
-		<label  asp-for="@Model.CreateProject.ShortDiscription" > خلاصه مقاله</label>
+		<label  asp-for="@Model.CreateProject.ShortDiscription" >  </label>
 		<input  asp-for="@Model.CreateProject.ShortDiscription"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.CreateProject.ShortDiscription" class="text-danger"> </span>
 
 	</div>
 	</div>
 
 	<div>
-		<label asp-for="@Model.CreateProject.Body" > متن مقاله</label>
+		<label asp-for="@Model.CreateProject.Body" >  </label>
 		<textarea  asp-for="@Model.CreateProject.Body"  class="form-control"> </textarea>
+		<span  asp-validation-for ="@Model.CreateProject.Body" class="text-danger"> </span>
 
 
 	</div>

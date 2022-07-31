@@ -25,7 +25,7 @@
             Body = body;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
-            CreationDate = creationDate; 
+            CreationDate = DateTime.Now; 
         }
     }
 }

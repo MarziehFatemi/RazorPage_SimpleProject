@@ -1,10 +1,10 @@
-﻿namespace RazorBlog_.NetCore.Models
+﻿namespace RazorBlog.Models
 {
     public class Project
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public string ShortDisciption { get; set; }
+        public string ShortDiscription { get; set; }
         public string Client { get; set; }
         public string Image { get; set; }
         public string Body { get; set; }
@@ -19,7 +19,7 @@
         {
             Id = id;
             Name = name;
-            ShortDisciption = shortDiscription;
+            ShortDiscription = shortDiscription;
             Client = client;
             Image = image;
             Body = body;

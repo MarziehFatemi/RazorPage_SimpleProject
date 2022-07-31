@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RazorBlog_.NetCore.Models;
+using RazorBlog.Models;
 
-namespace RazorBlog_.NetCore.Mapping
+namespace RazorBlog.Mapping
 {
     public class ProjectMapping : IEntityTypeConfiguration<Project>
     {
@@ -12,7 +12,7 @@ namespace RazorBlog_.NetCore.Mapping
             builder.ToTable("Tb_Projects"); // name of the table 
             builder.HasKey(x => x.Id); // set the primary key 
             builder.Property(x => x.Name).HasMaxLength(255).IsRequired(); //
-            builder.Property(x => x.ShortDisciption).HasMaxLength(255).IsRequired(); //
+            builder.Property(x => x.ShortDiscription).HasMaxLength(255).IsRequired(); //
             builder.Property(x => x.PictureTitle).HasMaxLength(255); //
             builder.Property(x => x.PictureAlt).HasMaxLength(255);//
             builder.Property(x => x.Client).HasMaxLength(255);  //

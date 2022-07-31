@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using RazorBlog.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<RazorBlog_dbContext>(x => x.UseSqlServer
+(builder.Configuration.GetConnectionString("DefaultConnection"))); 
+
 
 var app = builder.Build();
 

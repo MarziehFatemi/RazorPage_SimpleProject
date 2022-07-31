@@ -11,53 +11,59 @@
 		@ViewData["Success"]
 	</div>
 }
+@if ( ViewData["Error"] != null)
+{
+	<div class="alert alert-danger">
+		@ViewData["Error"]
+	</div>
+}
 
 <form  method="post">
 
 	<div>
 	<div>
-		<label asp-for="@Model.CreateProject.Name" >  </label>
-		<input  asp-for="@Model.CreateProject.Name"  class="form-control"> </input>
-		<span  asp-validation-for ="@Model.CreateProject.Name" class="text-danger" > </span>
+		<label asp-for="@Model.Command.Name" >  </label>
+		<input  asp-for="@Model.Command.Name"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.Command.Name" class="text-danger" > </span>
 	</div>
 
 	<div>
 
-		<label asp-for="@Model.CreateProject.Client"> </label>
-		<input  asp-for="@Model.CreateProject.Client"  class="form-control"> </input>
+		<label asp-for="@Model.Command.Client"> </label>
+		<input  asp-for="@Model.Command.Client"  class="form-control"> </input>
 		
 	</div>
 
 	<div> 
-		<label asp-for="@Model.CreateProject.Image"> </label>
-		<input  asp-for="@Model.CreateProject.Image"  class="form-control"> </input>
-		<span  asp-validation-for ="@Model.CreateProject.Image" class="text-danger"> </span>
+		<label asp-for="@Model.Command.Image"> </label>
+		<input  asp-for="@Model.Command.Image"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.Command.Image" class="text-danger"> </span>
 
 	</div>
 
 	<div>
-		<label asp-for="@Model.CreateProject.PictureAlt">  </label>
-		<input  asp-for="@Model.CreateProject.PictureAlt"  class="form-control"> </input>
+		<label asp-for="@Model.Command.PictureAlt">  </label>
+		<input  asp-for="@Model.Command.PictureAlt"  class="form-control"> </input>
 		
 	</div>
 	<div>
-		<label asp-for="@Model.CreateProject.PictureTitle" >  </label>
-		<input  asp-for="@Model.CreateProject.PictureTitle" class="form-control"> </input>
+		<label asp-for="@Model.Command.PictureTitle" >  </label>
+		<input  asp-for="@Model.Command.PictureTitle" class="form-control"> </input>
 		
 	</div>
 
 	<div>
-		<label  asp-for="@Model.CreateProject.ShortDiscription" >  </label>
-		<input  asp-for="@Model.CreateProject.ShortDiscription"  class="form-control"> </input>
-		<span  asp-validation-for ="@Model.CreateProject.ShortDiscription" class="text-danger"> </span>
+		<label  asp-for="@Model.Command.ShortDiscription" >  </label>
+		<input  asp-for="@Model.Command.ShortDiscription"  class="form-control"> </input>
+		<span  asp-validation-for ="@Model.Command.ShortDiscription" class="text-danger"> </span>
 
 	</div>
 	</div>
 
 	<div>
-		<label asp-for="@Model.CreateProject.Body" >  </label>
-		<textarea  asp-for="@Model.CreateProject.Body"  class="form-control"> </textarea>
-		<span  asp-validation-for ="@Model.CreateProject.Body" class="text-danger"> </span>
+		<label asp-for="@Model.Command.Body" >  </label>
+		<textarea  asp-for="@Model.Command.Body"  class="form-control"> </textarea>
+		<span  asp-validation-for ="@Model.Command.Body" class="text-danger"> </span>
 
 
 	</div>

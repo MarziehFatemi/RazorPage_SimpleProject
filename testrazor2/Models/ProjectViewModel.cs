@@ -29,6 +29,7 @@ namespace RazorBlog.Models
         [Required(ErrorMessage = "متن مقاله اجباری است")]
         public string Body { get; set; }
 
+
         [DisplayName("ALt تصویر")]
         [MaxLength(255)]
         public string PictureAlt { get; set; }

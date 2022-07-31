@@ -1,0 +1,63 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form  method="post">
+
+	<div>
+	<div>
+		<label> نام </label>
+		<input  type="text" name ="name"  class="form-control"> </input>
+
+	</div>
+
+	<div>
+
+		<label> مشتری</label>
+		<input  type="text" name ="Client"  class="form-control"> </input>
+
+	</div>
+
+	<div> 
+		<label> تصویر</label>
+		<input  type="text" name ="Image"  class="form-control"> </input>
+
+	</div>
+
+	<div>
+		<label> Alt  تصویر</label>
+		<input  type="text" name ="PictureAlt"  class="form-control"> </input>
+
+	</div>
+	<div>
+		<label> عنوان تصویر</label>
+		<input  type="text" name ="PictureTitle"  class="form-control"> </input>
+
+	</div>
+
+	<div>
+		<label> خلاصه مقاله</label>
+		<input  type="text" name ="ShortDiscription"  class="form-control"> </input>
+
+	</div>
+	</div>
+
+	<div>
+		<label> متن مقاله</label>
+		<textarea  type="text" name ="Body"  class="form-control"> </textarea>
+
+
+	</div>
+
+<div>
+<button type="submit" class="btn btn-dark"> ارسال  ></button>
+	</div>
+
+
+
+
+</form>

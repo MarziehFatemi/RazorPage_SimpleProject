@@ -1,10 +1,16 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "ایجاد مقاله ";
 }
 <h1>@ViewData["Title"]</h1>
 
+@if ( ViewData["Success"] != null)
+{
+	<div class="alert alert-success">
+		@ViewData["Success"]
+	</div>
+}
 
 <form  method="post">
 

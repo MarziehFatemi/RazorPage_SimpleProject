@@ -13,11 +13,11 @@
         public DateTime CreationDate { get; set; }
 
 
-        public Project(long id, string name , string client, 
+        public Project(string name , string client, 
             string image, string pictureAlt, string pictureTitle,
             string shortDiscription, string body)
         {
-            Id = id;
+            
             Name = name;
             ShortDiscription = shortDiscription;
             Client = client;

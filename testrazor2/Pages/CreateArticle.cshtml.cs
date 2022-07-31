@@ -5,12 +5,15 @@ using RazorBlog.Models;
 
 namespace testrazor2.Pages
 {
-    public class PrivacyModel : PageModel
+    public class CreateArticleModel : PageModel
     {
       //[ViewData]
       //string Success { get; set; } 
+
+        public ProjectViewModel CreateProject { get; set; }
+
         private readonly  RazorBlog_dbContext _Context; 
-        public PrivacyModel(RazorBlog_dbContext Context)
+        public CreateArticleModel(RazorBlog_dbContext Context)
         {
             _Context= Context;
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RazorBlog.Migrations
 {
-    public partial class CreateDb_ProjectTable : Migration
+    public partial class CreateRazorDb2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,12 +17,12 @@ namespace RazorBlog.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ShortDiscription = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Client = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Client = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Body = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PictureAlt = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    PictureTitle = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    PictureAlt = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    PictureTitle = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -13,7 +13,7 @@ namespace RazorBlog.Models
 
         [DisplayName("چکیده مقاله")]
         [Required(ErrorMessage = "چکیده مقاله اجباری است")]
-        [MaxLength(255)]
+        [MaxLength(255,ErrorMessage="حداکثر طول 255 کاراکتر است")]
         public string ShortDiscription { get; set; }
 
         [DisplayName("مشتری")]
@@ -38,8 +38,7 @@ namespace RazorBlog.Models
         [MaxLength(255)]
         public string PictureTitle { get; set; }
 
-        public string CreationDate { get; set; }
-
+        
 
     }
 }

@@ -12,8 +12,8 @@ using RazorBlog.Context;
 namespace RazorBlog.Migrations
 {
     [DbContext(typeof(RazorBlog_dbContext))]
-    [Migration("20220731102152_BodySet2Required")]
-    partial class BodySet2Required
+    [Migration("20220731134806_CreateRazorDb2")]
+    partial class CreateRazorDb2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

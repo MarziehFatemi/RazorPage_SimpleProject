@@ -43,11 +43,11 @@ namespace testrazor2.Pages
 
                 }
            }
-   ////         else
-			////{
-   ////             ViewData["Error"] = "اصلاح نموده مجدد تلاش نمایید. ";
+            else
+            {
+                ViewData["Error"] = "اصلاح نموده مجدد تلاش نمایید. ";
 
-   ////         }
+            }
 
 
         }

@@ -24,7 +24,7 @@ namespace testrazor2.Pages
         {
         }
 
-        public void OnPost (ProjectViewModel Command)
+        public void OnPost ([Bind("Name,Image,ShortDiscription,Body")] ProjectViewModel Command)
         {
             if (ModelState.IsValid)
             {

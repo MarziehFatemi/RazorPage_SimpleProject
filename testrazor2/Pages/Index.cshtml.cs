@@ -1,20 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorBlog.Context;
+using RazorBlog.Models;
+using System.Linq;
 
 namespace testrazor2.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        public List<ProjectIndexViewModel> Project { get; set; }
+        private readonly RazorBlog_dbContext _Context; 
+        
+        public IndexModel(RazorBlog_dbContext Context)
         {
-            _logger = logger;
+            _Context = Context; 
         }
 
         public void OnGet()
         {
-
+            Project = _Context.Projects.Select(x => new ProjectIndexViewModel
+            {
+                Name = x.Name,
+                ShortDiscription = x.ShortDiscription,
+                Image =x.Image,
+            }
+            ).ToList(); 
+             
+            
         }
     }
 }

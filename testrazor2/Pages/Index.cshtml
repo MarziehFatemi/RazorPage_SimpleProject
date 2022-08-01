@@ -34,7 +34,7 @@
 
            
            
-           <a asp-page="/CreateArticle"  class="btn btn-danger"  >   حذف</a>
+           <a asp-page-handler  ="Remove" asp-route-id="@Item.Id" class="btn btn-danger"  >   حذف</a>
        </div>
        </div>
     }

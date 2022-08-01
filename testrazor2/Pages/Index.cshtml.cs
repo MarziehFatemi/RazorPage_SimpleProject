@@ -18,7 +18,9 @@ namespace testrazor2.Pages
 
         public void OnGet()
         {
-            Project = _Context.Projects.Select(x => new ProjectIndexViewModel
+            Project = _Context.Projects
+                .Where(x=> x.IsRemoved == false)
+                .Select(x => new ProjectIndexViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
@@ -28,9 +30,23 @@ namespace testrazor2.Pages
                 Client = x.Client,
 
             }
-            ).ToList(); 
+            ).OrderByDescending(x=>x.Id).ToList(); 
              
             
+        }
+
+
+        public IActionResult OnGetRemove(int id)
+        {
+            var DeletedP = _Context.Projects.FirstOrDefault(x => x.Id == id);
+            if (DeletedP != null)
+            {
+                DeletedP.IsRemoved = true;
+                _Context.SaveChanges();
+            }
+
+            return RedirectToPage("/Index");
+
         }
     }
 }

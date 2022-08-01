@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorBlog.Context;
 
@@ -11,9 +12,10 @@ using RazorBlog.Context;
 namespace RazorBlog.Migrations
 {
     [DbContext(typeof(RazorBlog_dbContext))]
-    partial class RazorBlog_dbContextModelSnapshot : ModelSnapshot
+    [Migration("20220801082047_IsRemovedAdded")]
+    partial class IsRemovedAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

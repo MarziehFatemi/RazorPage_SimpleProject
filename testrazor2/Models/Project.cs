@@ -12,6 +12,8 @@
         public string  PictureTitle { get; set; }
         public DateTime CreationDate { get; set; }
 
+        public bool IsRemoved { get; set; } = false; 
+
 
         public Project(string name , string client, 
             string image, string pictureAlt, string pictureTitle,
@@ -25,7 +27,8 @@
             Body = body;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
-            CreationDate = DateTime.Now; 
+            CreationDate = DateTime.Now;
+            IsRemoved = false; 
         }
     }
 }

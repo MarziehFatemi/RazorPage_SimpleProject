@@ -20,9 +20,13 @@ namespace testrazor2.Pages
         {
             Project = _Context.Projects.Select(x => new ProjectIndexViewModel
             {
+                Id = x.Id,
                 Name = x.Name,
                 ShortDiscription = x.ShortDiscription,
                 Image =x.Image,
+                Body = x.Body, 
+                Client = x.Client,
+
             }
             ).ToList(); 
              

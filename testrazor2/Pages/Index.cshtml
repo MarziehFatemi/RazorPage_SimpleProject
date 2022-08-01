@@ -28,7 +28,13 @@
        
            <p class="card-text" > @Item.ShortDiscription  </p>
       
-           <a class="btn btn-success"  >   ادامه مطلب</a>
+            <a asp-page="/ArticleDetails" 
+                   asp-route-id="@Item.Id" 
+                   class="btn btn-primary" >ادامه مطلب</a>
+
+           
+           
+           <a asp-page="/CreateArticle"  class="btn btn-danger"  >   حذف</a>
        </div>
        </div>
     }

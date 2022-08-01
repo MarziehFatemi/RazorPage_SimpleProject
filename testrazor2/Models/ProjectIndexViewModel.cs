@@ -4,6 +4,8 @@ namespace RazorBlog.Models
 {
     public class ProjectIndexViewModel
     {
+        public long Id { get; set; }
+
         [DisplayName("نام")]
          public string Name { get; set; }
 

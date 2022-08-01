@@ -25,7 +25,7 @@ namespace testrazor2.Pages
                 Id = x.Id,
                 Name = x.Name,
                 ShortDiscription = x.ShortDiscription,
-                Image =x.Image,
+                Image =x.Image+".png",
                 Body = x.Body, 
                 Client = x.Client,
 

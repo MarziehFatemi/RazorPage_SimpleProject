@@ -28,7 +28,17 @@
 											</h5>
 											 
 										<p class=" d-flex card-text">@item.ShortDiscription.Substring(0,200)</p>
+										
 										<p class="card-text"><small class="text-muted">مشتری: @item.Client</small></p>
+									
+									 <a asp-page="/ArticleDetails" 
+                                        asp-route-id="@item.Id" 
+                                       class="btn btn-primary" >ادامه مطلب</a>
+
+           
+           
+                                      <a asp-page-handler  ="Remove" asp-route-id="@item.Id" class="btn btn-danger"  >   حذف</a>
+
 									</div>
 								</div>
 							</div>

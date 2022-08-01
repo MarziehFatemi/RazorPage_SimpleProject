@@ -24,7 +24,7 @@ namespace testrazor2.Pages
         {
         }
 
-        public void OnPost ([Bind("Name,Image,ShortDiscription,Body")] ProjectViewModel Command)
+        public IActionResult OnPost ([Bind("Name,Image,ShortDiscription,Body,PictureAlt,PictureTitle,Client")] ProjectViewModel Command)
         {
             if (ModelState.IsValid)
             {
@@ -35,18 +35,19 @@ namespace testrazor2.Pages
                 {
                     _Context.Projects.Add(project);
                     _Context.SaveChanges();
-                    ViewData["Success"] = "مقاله با موفقیت ذخیره شد";
+                   return RedirectToPage("/Index"); 
                 }
                 catch (Exception e)
 				{
-                    ViewData["Error"] = e.ToString(); 
+                    ViewData["Error"] = e.ToString();
+                    return Page(); 
 
                 }
            }
             else
             {
                 ViewData["Error"] = "اصلاح نموده مجدد تلاش نمایید. ";
-
+                return Page(); 
             }
 
 

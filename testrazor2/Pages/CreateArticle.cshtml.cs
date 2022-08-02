@@ -46,7 +46,8 @@ namespace testrazor2.Pages
            }
             else
             {
-                ViewData["Error"] = "اصلاح نموده مجدد تلاش نمایید. ";
+                ViewData["Error"] = ModelState.Select(x => x.Value.Errors)
+                           .Where(y => y.Count > 0).ToString();
                 return Page(); 
             }
 
